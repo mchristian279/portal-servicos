@@ -1,12 +1,14 @@
-import express from 'express';
-import { pessoaController } from './pessoa-controller';
+import express from "express";
 import configMiddleware from './config-middleware';
+import {datacenterController} from "./datacenter-controller";
 
 const app = express();
 
 configMiddleware(app);
 
-pessoaController(app);
+// controllers
+datacenterController(app);
+
 
 export default app;
 

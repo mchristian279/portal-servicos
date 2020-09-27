@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import datacenterService from "@/service/datacenterService";
+
 export default {
   data: function() {
     return {
@@ -85,9 +87,7 @@ export default {
 
   methods: {
     submit() {
-
-
-
+      datacenterService.vmProvision(this.form);
     },
 
     cancel() {}
