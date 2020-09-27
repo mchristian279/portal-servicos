@@ -3,6 +3,9 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <v-alert type="success">
+        I'm a success alert.
+      </v-alert>
     </div>
     <router-view />
   </div>
