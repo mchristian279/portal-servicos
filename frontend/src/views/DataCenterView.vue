@@ -2,6 +2,8 @@
   <div>
     <h1>Data Center</h1>
     <FormProvisionVM />
+
+
   </div>
 </template>
 
