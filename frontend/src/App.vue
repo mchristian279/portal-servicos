@@ -2,10 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      <v-alert type="success">
-        I'm a success alert.
-      </v-alert>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/datacenter">DataCenter</router-link>
     </div>
     <router-view />
   </div>
