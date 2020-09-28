@@ -19,7 +19,7 @@
           required
         >
         </v-text-field>
-        <v-text-field v-model="form.vmName" label="VM Name" required>
+        <v-text-field v-model="form.vmNameInstance" label="VM Name" required>
         </v-text-field>
         <v-text-field
           v-model="form.memory"
@@ -71,7 +71,7 @@ export default {
         datacenterName: "",
         systemOperation: null,
         qtdInstances: 0,
-        vmName: "",
+        vmNameInstance: "",
         memory: 0,
         vCPU: 0,
         network: {

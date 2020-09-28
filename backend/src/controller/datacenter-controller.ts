@@ -1,10 +1,10 @@
-import terraform from '../dao/terraform';
+import terraform from '../dao/terraformDao';
 
 
 export function datacenterController(app) {
 
     app.post('/datacenters', function (req, res) {
-        terraform.provisionVM();
+        terraform.provisionVM(req.body);
         res.send('OK')
     });
 
