@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid="true">
+  <v-container fluid>
     <v-form ref="form">
       <v-layout row wrap>
         <v-flex>

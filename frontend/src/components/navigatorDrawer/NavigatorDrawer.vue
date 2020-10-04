@@ -15,15 +15,20 @@
       <v-divider></v-divider>
 
       <v-list dense nav>
-        <v-list-item v-for="item in routes" :key="item.name" link>
+        <v-list-item
+          v-for="item in routes"
+          @click="choice(item.path)"
+          :key="item.name"
+          link
+        >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title link @click="choice(item.path)">{{
-              item.name
-            }}</v-list-item-title>
+            <v-list-item-title>
+              {{ item.name }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -43,7 +48,9 @@ export default {
   },
   methods: {
     choice(path) {
-      this.$router.push(path);
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
     }
   }
 };
