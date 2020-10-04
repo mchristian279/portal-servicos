@@ -1,19 +1,19 @@
 variable "instance_count" {
-  default = "1231"
+  default = "1"
 }
 
 variable "disk_img" {
-  default = "file:///Dados/Vms/null"
+  default = "file:///Dados/Vms/centos7.0"
 }
 
 variable "vm_network_addresses" {
   description = "Configura Rede"
-  default     = "3121341/31231"
+  default     = "192.168.36.0/24"
 }
 
 variable "vm_addresses" {
   default = {
-    "0" = "21231"
+    "0" = "192.168.36.10"
 
   }
 
@@ -21,11 +21,11 @@ variable "vm_addresses" {
 
 variable "vm_network_name" {
   description = "Define o nome da rede no KVM"
-  default     = "1231"
+  default     = "teste"
 }
 
 variable "domain_name" {
-  default = "312131"
+  default = "teste"
 }
 
 #Provider
@@ -68,9 +68,9 @@ resource "libvirt_network" "vm_network" {
 
 #VM
 resource "libvirt_domain" "domain" {
-  name   = "cloudera-${count.index}"
-  memory = "123342"
-  vcpu   = "3121341"
+  name   = "teste-${count.index}"
+  memory = "1024"
+  vcpu   = "2"
 
   network_interface {
     network_id     = libvirt_network.vm_network.id

@@ -41,6 +41,8 @@ const setParamTerraformScript = (payload) => {
 
 }
 
+export const { setParamTerraformScript };
+
 exports.setParamTerraformScript = setParamTerraformScript
 exports.createWorkspace = createWorkspace
 

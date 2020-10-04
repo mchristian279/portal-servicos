@@ -1,18 +1,16 @@
 import Vue from "vue";
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
+import Vuetify from "vuetify/lib";
+import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify);
-
-
 export default new Vuetify({
-  theme: {
-    themes: {
-      light: {
-        primary: "#3f51b5",
-        secondary: "#b0bec5",
-        anchor: "#8c9eff"
-      }
-    }
-  }
-});
+    theme: {
+        themes: {
+            light: {
+                primary: colors.blue,
+                secondary: colors.red.lighten2,
+                accent: colors.indigo.base,
+            },
+        },
+    },
+})
